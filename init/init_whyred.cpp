@@ -73,6 +73,7 @@ static void init_setup_model_properties()
 
     }
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys");
+	property_override("ro.oem_unlock_supported", "0");
 }
 
 void vendor_load_properties()
