@@ -546,4 +546,7 @@
 
     <!-- True if the firmware supports connected MAC randomization -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- Flag indicating whether the device supports dynamic font contrast handling -->
+    <bool name="config_dynamic_font_contrast_available">true</bool>
 </resources>
