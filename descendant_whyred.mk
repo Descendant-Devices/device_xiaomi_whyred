@@ -26,13 +26,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
 # Inherit from custom vendor
-$(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
+#$(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Descendant stuff.
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
-DEVICE_MAINTAINER := Sreekanth
-PRODUCT_NAME := arrow_whyred
+PRODUCT_NAME := descendant_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -53,5 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_VENDOR := Xiaomi
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
 TARGET_SCREEN_DENSITY := 440
+TARGET_FACE_UNLOCK_SUPPORT := YES
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := sdm660
